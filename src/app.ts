@@ -1,5 +1,6 @@
 const Koa = require('koa');
 const app = new Koa();
+const db = require("../data/db.js"); // importing the db config
 
 // logger
 
@@ -19,6 +20,9 @@ app.use(async (ctx, next) => {
 });
 
 app.use(async ctx => {
+  const repositories = await db("repositories"); // making a query to get all repos
+  console.log(repositories);
+
   ctx.body = 'Hello World';
 });
 
