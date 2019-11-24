@@ -2,7 +2,7 @@
   "name": "ts-service",
   "version": "1.0.0",
   "description": "",
-  "main": "build/boot.js",
+  "main": "build/app.js",
   "scripts": {
     "start:dev": "nodemon",
     "build": "tsc",
@@ -25,6 +25,7 @@
   "dependencies": {
     "@types/node": "^12.12.12",
     "knex": "^0.20.2",
+    "koa": "^2.11.0",
     "objection": "^1.6.11",
     "pg": "^7.14.0",
     "typescript": "^3.7.2"
