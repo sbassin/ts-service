@@ -2,8 +2,9 @@
   "name": "ts-service",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "build/boot.js",
   "scripts": {
+    "start:dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,5 +21,9 @@
   "dependencies": {
     "@types/node": "^12.12.12",
     "typescript": "^3.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1",
+    "ts-node": "^8.5.2"
   }
 }
