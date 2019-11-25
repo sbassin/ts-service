@@ -1,8 +1,10 @@
 import { Model } from 'objection';
+let GUID = require('node-uuid');
+
 const Knex = require('knex')
 const connection = require('../knexfile')
 
-export default class Repository extends Model {
+export class Repository extends Model {
   readonly id!: string;
   name!: string;
   created_at!: Date;
@@ -10,6 +12,12 @@ export default class Repository extends Model {
 
   // Table name is the only required property.
   static tableName = 'repositories';
+
+  constructor(name: string) {
+    super();
+    this.id = GUID.v4();
+    this.name = name;
+  }
 
   // Optional JSON schema. This is not the database schema! Nothing is generated
   // based on this. This is only used for validation. Whenever a model instance

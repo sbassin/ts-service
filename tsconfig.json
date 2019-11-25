@@ -42,7 +42,12 @@
 
     // Allow to import node module without `import *`
     // Ex import express from 'express'
-    "esModuleInterop": true
+    "esModuleInterop": true,
+
+    // These three were added to support InversifyJS
+    "types": ["reflect-metadata", "node"],
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
 
   // The folder or files you want to exclude
